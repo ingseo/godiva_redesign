@@ -1,0 +1,98 @@
+@charset"utf-8";
+
+/*section1 메인 css*/
+.section1{background-image: url(godiva/sub_online/bgmain.jpg); height: 710px; min-height: 600px; background-position: center; background-size: cover; background-repeat: no-repeat;}
+.section1 .text{width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;font-size: 0.8em;}
+.section1 .text p{font-size: 2.5em !important; font-weight: 200;margin: 0; top: -10px; font-family: 'Nunito Sans'; color: #f8f4eb !important;}
+.section1 .text .title{font-size: 8em !important; line-height: 100px; color: #f8f4eb !important; top: -20px; }
+.section1 .text .title span:nth-child(1){letter-spacing: 32px; left: 16px}
+.section1 .text .type{font-size: 6em !important; top: -30px !important;}
+.section1 .menu_group{display: flex; position: absolute; left: calc(50% - 225px); margin: 0; bottom: 20%; font-family: 'Noto Sans KR'}
+.section1 .menu_group a{width: 150px; height: 50px; font-size: 1.3em; text-align: center; display: flex; justify-content: center; align-items: center; border: 1px solid #f8f4eb; border-right: none; transition: 0.3s; color: #f8f4eb;}
+.section1 .menu_group a:nth-child(3){border-right: 1px solid #f8f4eb;}
+.section1 .menu_group a:hover{background: #f8f4eb; color: #3c2820;}
+
+/*section1 메인 미디어쿼리*/
+@media(max-width:640px){
+    .section1{height: 200px !important; background-size: cover; min-height: auto; background-position: top;}
+    .section1 .text{font-size: 0.4em; top: -5px}
+    .section1 .text p{top: 0px}
+    .section1 .text .title{line-height: 40px; top: 0;}
+    .section1 .text .title span:nth-child(1){letter-spacing: 16px; left: 8px;}
+    .section1 .text .type{display: none;}
+    .section1 .menu_group{position: relative; top: 0; left: 0; display: grid; grid-template-columns: auto;}
+    .section1 .menu_group a{width: auto; border: none; background: #f8f4eb; color: #3c2820; border: 1px solid #3c2820;}
+    .section1 .menu_group a:nth-child(1){border-left: none; border-right: none;}
+    .section1 .menu_group a:nth-child(2){border-right: none; border-left: none ; border-right: none; border-top: none;}
+    .section1 .menu_group a:nth-child(3){border-left: none; border-right: none ; border-top: none;}
+    .section1 .menu_group a:hover{background: #3c2820; color: #f8f4eb;}
+}
+
+/*section2 오프라인샵 css*/
+.section2{height: 134px; width: 100%; background-image: url(godiva/sub_online/label.jpg); background-position: center; background-size: cover;}
+.section2 .off{width: 100%; max-width: 1200px; height: 100%; display: flex; font-size: 2.0em;  color: #f8f4eb; align-items: center; justify-content: flex-end; margin: 0 auto;}
+.section2 p{margin-bottom: 0;}
+.section2 i{margin: 0 20px;}
+
+/*section2 오프라인샵 미디어쿼리*/
+@media(max-width:1080px){
+    .section2{ height: 110px;}
+    .section2 .off{font-size: 2em !important; right: 5%;}
+}
+@media(max-width:640px){
+    .section2{top: 150px; height: 80px;}
+    .section2 .off{font-size: 1.3em !important; right: 0;}
+}
+
+/*section3 온라인샵 css*/
+.section3 .bg{height: 620px; background: url(godiva/sub_online/bgshop.jpg); background-position: center; background-size: cover;}
+.section3 .m_bg{height: 550px; background: url(godiva/sub_online/m_bgshop.jpg); background-position: center; background-size: cover; display: none;}
+.section3 .online .text2{position: absolute; top: calc(50% - 160px); right: 20%; text-align: end; display: flex; flex-direction: column; align-items: flex-end; color: #ceb56f !important;}
+.section3 .online .text2 .title{color: #ceb56f !important;}
+.section3 .online .text2{color: #ceb56f !important;}
+.section3 .text2 .btn{color: #ceb56f !important; border: 1px solid #ceb56f !important; width: 400px !important; letter-spacing: 2px;}
+.section .text2 .btn:hover{color: #3c2820 !important; background: #ceb56f !important;}
+
+/*section3 온라인샵 미디어쿼리*/
+@media(max-width:1080px){
+    .section3 .online .text2{right: 10%;}
+    .section3 .text2 .btn{width: 200px !important;}
+}
+
+@media(max-width:640px){
+    .section3{top: 150px;}
+    .section3 .bg{display: none;}
+    .section3 .m_bg{display: block;}
+    .section3 .title{top: -10px}
+    .section3 .type{left: 0 !important; right: 0 !important;}
+    .section3 .text2-1{top: 50px !important; text-align: center !important; display: flex; flex-direction: column; align-items: center !important; font-size: 0.8em; width: 100%; left: 0 !important; right: 0 !important;}
+    .section3 .choco .text2-1{top: 70px !important;}
+    .section3 .snack .text2-1{top: 60px !important;}
+}
+
+/*section4 시즌/컬렉션 css*/
+.section4 .wrap{display: flex; height: 500px; width: 100%; overflow: hidden;}
+.section4 .wrap .left{height: 100%; width: calc(50% + 200px); position: absolute; filter: grayscale(0.8) brightness(0.9);  transition: 0.3s;}
+.section4 .wrap .right{height: 100%; width: calc(50% + 200px); position: absolute; left: 50%; filter: grayscale(0.8) brightness(0.9); transition: 0.3s;}
+.section4 .wrap .left .rotate{height: 100%; width: 100%; transform: skewX(-15deg); overflow: hidden; left: -200px;}
+.section4 .wrap .right .rotate{height: 100%; width: 100%; transform: skewX(-15deg); overflow: hidden; }
+.section4 .wrap .left .bg{background: url(godiva/sub_online/bgnow1.jpg); height: 100%; width: 100%; background-position: center center; background-size: cover; transform: skewX(15deg); left: 100px;}
+.section4 .wrap .right .bg{background: url(godiva/sub_online/bgnow2.jpg); height: 100%; width: 100%; background-position: center center; background-size: cover; transform: skewX(15deg); left: -100px;}
+.section4 .text{font-family: "Nunito Sans"; font-size: 3em; font-weight: 900; color: #3c2820; position: absolute; top: 180px; left: calc(50% - 200px); width: 400px; text-align: center; text-shadow: 2px 2px 0px #f8f4eb; height: 180px; display: flex; flex-direction: column; align-items: center; justify-content: center;}
+.section4 text p{}
+
+.section4 .wrap .left:hover{filter: none;}
+.section4 .wrap .right:hover{filter: none;}
+
+/*section4 시즌/컬렉션 미디어쿼리*/
+@media(max-width:640px){
+    .section4 {top: 150px;}
+    .section4 .wrap{height: 550px;}
+    .section4 .text{width: 300px; font-size: 2em; left: calc(50% - 150px); height: 110px; top: 200px}
+}
+
+/*컨텍트,푸터 미디어쿼리*/
+@media(max-width:640px){
+    .contact{top: 100px;}
+    .footer{top: 100px;}
+}

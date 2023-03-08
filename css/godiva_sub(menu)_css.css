@@ -1,0 +1,110 @@
+@charset"utf-8";
+
+/*section1 메인 css*/ /*백그라운드 이미지 깨짐. 수정필요!*/
+.section1{background-image: url(godiva/sub_menu/bg_mainimage.jpg); height: calc(100vh - 120px); min-height: 600px; background-position: center; background-size: cover; background-repeat: no-repeat;}
+.section1 .text{width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; top: -40px; text-align: center;}
+.section1 .text p{font-size: 4em !important; font-weight: 200;margin: 0; top: 50px; font-family: 'Nunito Sans';}
+.section1 .text .title{font-size: 13em !important;}
+.section1 .text .type{font-size: 6em !important; top: -70px !important;}
+.section1 .menu_group{display: flex; position: absolute; left: calc(50% - 300px); margin: 0; bottom: 25%; font-family: 'Noto Sans KR'}
+.section1 .menu_group a{width: 150px; height: 50px; font-size: 1.3em; text-align: center; display: flex; justify-content: center; align-items: center; border: 1px solid #3c2820; border-right: none; transition: 0.3s;}
+.section1 .menu_group a:nth-child(4){border-right: 1px solid #3c2820;}
+.section1 .menu_group a:hover{background: #3c2820; color: #f8f4eb;}
+
+/*section1 메인 미디어쿼리*/
+@media(max-width:1080px){
+    .section1{height: calc(100vh - 160px)}
+    .section1 .text{font-size: 0.8em; top: -20px;}
+    .section1 .menu_group{bottom: 30%;}
+}
+@media(max-width:640px){
+    .section1{height: 200px !important; background-size: cover; min-height: auto; background-position: top;}
+    .section1 .text{font-size: 0.4em; top: -5px}
+    .section1 .text p{top: 30px}
+    .section1 .text .type{display: none;}
+    .section1 .menu_group{position: relative; top: 0; left: 0; display: grid; grid-template-columns: 1fr 1fr;}
+    .section1 .menu_group a{width: auto; border: none; background: #f8f4eb; color: #3c2820; border: 1px solid #3c2820;}
+    .section1 .menu_group a:nth-child(1){border-left: none; border-right: none;}
+    .section1 .menu_group a:nth-child(2){border-right: none;}
+    .section1 .menu_group a:nth-child(3){border-left: none; border-right: none; border-top: none;}
+    .section1 .menu_group a:nth-child(4){border-right: none; border-top: none;}
+    .section1 .menu_group a:hover{background: #3c2820; color: #f8f4eb;}
+}
+
+/*section2 미니배너 css*/
+.section2{display: flex; width: 100%;}
+.section2>a{flex: 1;}
+.section2 .hot{display: flex; height: 110px; align-items: center; justify-content: flex-end; padding-right: 10%; background: #3c2820; color: #f8f4eb; font-family: 'Nunito Sans'; font-size: 3em; font-weight: 900;}
+.section2 .hot p{margin-right: 5%; margin-bottom: 0;}
+.section2 .today{display: flex; height: 110px; align-items: center; padding-left: 10%; font-family: 'Noto Sans KR'; background: #ffffff;}
+.section2 .today p{margin-bottom: 0; font-weight: bold; font-size: 1.1em;}
+.section2 .today img{height: 60px; margin-left: 20px;}
+.section2 .today i{font-size: 3em; margin-left: 5%;}
+
+/*section2 미니배너 미디어쿼리*/
+@media(max-width:1080px){
+    .section2 .hot{height: 80px; font-size: 1.5em}
+    .section2 .today{height: 80px;}
+    .section2 .today p{font-size: 1em;}
+    .section2 .today img{height: 50px;}
+    .section2 .today i{font-size: 1.5em;}
+}
+
+@media(max-width:640px){
+    .section2{top: 100px; flex-direction: column;}
+    .section2 .hot{justify-content: center; padding-right: 0; font-size: 2em}
+    .section2 .today{justify-content: center; padding-left: 0;}
+    .section2 .today p{font-size: 1.1em;}
+    .section2 .today img{height: 50px;}
+    .section2 .today i{font-size: 2em;}
+}
+
+/*section3 메뉴리스트*/
+.section3{width: 100%; overflow: hidden;}
+.section3 .choco .bg{width: 100%; height: 420px; background: url(godiva/sub_menu/bg_choco.jpg); background-size: cover; background-position: center;}
+.section3 .choco .m_bg{width: 100%; height: 550px; background: url(godiva/sub_menu/m_bg_choco.jpg); background-size: cover; background-position: center; display: none;}
+.section3 .choco .type{left: 50px }
+.section3 .choco .text2-1{position: absolute; top: calc(50% - 130px); left: 20%}
+
+.section3 .drink .bg{width: 100%; height: 420px; background: url(godiva/sub_menu/bg_drink.jpg); background-size: cover; background-position: center;}
+.section3 .drink .m_bg{width: 100%; height: 550px; background: url(godiva/sub_menu/m_bg_drink.jpg); background-size: cover; background-position: center; display: none;}
+.section3 .drink .text2-1{text-align: end; position: absolute; top: calc(50% - 150px); right: 20%; display: flex; flex-direction: column; align-items: flex-end;}
+.section3 .drink .type{color: #ceb56f !important; left: -50px}
+
+.section3 .ice .bg{width: 100%; height: 420px; background: url(godiva/sub_menu/bg_ice.jpg); background-size: cover; background-position: center;}
+.section3 .ice .m_bg{width: 100%; height: 550px; background: url(godiva/sub_menu/m_bg_ice.jpg); background-size: cover; background-position: center; display: none;}
+.section3 .ice .type{left: 150px }
+.section3 .ice .text2-1{position: absolute; top: calc(50% - 150px); left: 20%;}
+
+.section3 .snack .bg{width: 100%; height: 420px; background: url(godiva/sub_menu/bg_snack.jpg); background-size: cover; background-position: center;}
+.section3 .snack .m_bg{width: 100%; height: 550px; background: url(godiva/sub_menu/m_bg_snack.jpg); background-size: cover; background-position: center; display: none;}
+.section3 .snack .text2-1{text-align: end; position: absolute; top: calc(50% - 130px); right: 20%; display: flex; flex-direction: column; align-items: flex-end; color: #f8f4eb}
+.section3 .snack .title{color: #f8f4eb !important;}
+.section3 .snack .type{color: #ceb56f !important; left: -150px;}
+.section .snack .btn{border: 1px solid #f8f4eb !important; color: #f8f4eb !important;}
+.section .snack .btn:hover{color: #3c2820 !important; background: #f8f4eb !important;}
+
+
+/*section3 메뉴리스트 미디어쿼리*/
+@media(max-width:1080px){
+    .section3 .choco .text2-1{left: 10%;}
+    .section3 .drink .text2-1{right: 10%;}
+    .section3 .ice .text2-1{left: 10%;}
+    .section3 .snack .text2-1{right: 10%;}
+}
+@media(max-width:640px){
+    .section3{top: 100px;}
+    .section3 .bg{display: none;}
+    .section3 .m_bg{display: block !important;}
+    .section3 .title{top: -10px}
+    .section3 .type{left: 0 !important; right: 0 !important;}
+    .section3 .text2-1{top: 40px !important; text-align: center !important; display: flex; flex-direction: column; align-items: center !important; font-size: 0.8em; width: 100%; left: 0 !important; right: 0 !important;}
+    .section3 .choco .text2-1{top: 70px !important;}
+    .section3 .snack .text2-1{top: 60px !important;}
+}
+
+/*컨텍트,푸터 미디어쿼리*/
+@media(max-width:640px){
+    .contact{top: 100px;}
+    .footer{top: 100px;}
+}

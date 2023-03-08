@@ -1,0 +1,133 @@
+@charset"utf-8";
+
+/*공통 css*/
+*{padding: 0; margin: 0; position: relative; list-style: none; }
+input[type="search"]{font-family: FontAwesome;}
+i{font-family: FontAwesome; font-style: normal;}
+
+body a{text-decoration: none; color: #3c2820;}
+body a:hover{text-decoration: none; color: #3c2820;}
+body a:visited{text-decoration: none; color: #3c2820;}
+body a:link{text-decoration: none;}
+
+::selection{background: #3c2820; color: #f8f4eb;}
+input:focus {outline:none;}
+
+.black{background: black; opacity: 0.8; z-index: 800; width: 100%; height: 100vh; position: fixed; top: 0;}
+.hiddenscroll{overflow: hidden;}
+
+.section .text .point>span{display: block; background: #d60000;width: 45px; height: 8px; margin-bottom: 10px;}
+.section .text .title{font-size: 3.5em; font-family: 'Nunito Sans'; font-weight: 900; color: #3c2820;}
+.section .text .type{font-size: 3em; font-family: 'Parisienne'; color: #cdb376; top: -10px}
+
+.section .text2{font-family: 'Noto Sans KR';}
+.section .text2 .point>span{display: block; background: #d60000;width: 120px; height: 2px; margin-bottom: 10px; top: -40px;}
+.section .text2 .title{font-size: 5em; color: #3c2820; z-index: 10; font-weight: bold}
+.section .text2 .type{font-size: 4em; font-family: 'Parisienne'; color: #f2f2f2; top: -40px;}
+.section .text2 .ex{font-size: 1.5em; top: -30px;}
+.section .text2 .btn{border: 1px solid #3c2820; border-radius: 0; width: 200px; height: 45px; font-size: 1.3em; display: flex; justify-content: center; align-items: center; top: -10px; transition: 0.3s}
+.section .text2 .btn:hover{color: #f8f4eb; background: #3c2820}
+
+
+/*메뉴바 css*/
+.navi{height: 120px; font-size: 1.3em; z-index: 300;  font-family: 'Noto Sans KR'; top:0; width: 100%;}
+.navi .fixed{ width: 100%; height: 120px; background: #f7e1aa; position:fixed; }
+.navi .navi_up{display: flex;}
+.navi .logo{height: 140px; display: flex; align-items: center; position: absolute; left: 50px; cursor: pointer; z-index: 10;}
+.navi .right{height: 60px; display: flex; align-items: center; position: absolute; right: 50px;}
+.navi .right i{right: 300px; cursor: pointer; position: absolute; z-index: 100;}
+.navi .right .search{width: 0px; height: 30px; 
+    color: #3c2820; padding: 3px; border: 2px solid #3c2820; transition: 0.3s; right: 10px; opacity: 0; transition: 0.5s}
+.navi .right input{display: none; border: none; background: none; height: 30px; position: absolute; top: -2px; width: 160px; font-size: 12px; left: 5px;}
+.navi .upmenu{display: flex; margin-bottom: 0; color: #3c2820; ; font-weight: bold; cursor: pointer; z-index: 10;}
+.navi .upmenu li{padding: 10px; margin: 0 5px; cursor: pointer;}
+.navi .navi_down{width: calc(100% - 300px); border-bottom: 60px solid #3c2820; position: absolute; right: 0; bottom: 0; border-left: 60px solid transparent; }
+.navi .downmenu{display: flex;max-width: 1200px; margin-left: 370px; justify-content: space-between; height: 60px; align-items: center; top: 60px; margin-right: 60px; }
+.navi .downmenu>li{height: 100%; display: flex; align-items: center;}
+.navi .list{color: #cdb376; font-weight: bold; font-style: italic; line-height: 60px; line-height: 30px; text-align: center;}
+.navi .list a{color: #f7e1aa; padding: 10px 30px; }
+.navi a:link{text-decoration: none; }
+
+.clicksearch{width: 200px !important; opacity: 1 !important;}
+
+/*서브메뉴바 css*/
+.navi .submenu_group{width: 100%; top: 50px; height: 0; z-index: 200; transition: 0.5s;}
+.navi .submenu_group .submenu{width: 100%; position: absolute; height: 100px; top: 0; border-bottom: 1px solid rgba(207,182,110,0.3); display: none; background: #3c2820;}
+.navi .submenu_group .submenu .wrap{display: grid; grid-template-columns: 33.3% 33.3% 33.3%; text-align: center; position: absolute; width: 100%; margin-bottom: 0; line-height: 32px; margin: 0 auto;}
+.navi .submenu_group .submenu a{color: #cdb376; padding: 5px;}
+.navi .submenu_group .submenu:nth-child(1) .wrap{top: 15px;}
+.navi .submenu_group .submenu:nth-child(2) .wrap{top: 15px;}
+.navi .submenu_group .submenu:nth-child(3) .wrap{top: 35px}
+.navi .submenu_group .submenu:nth-child(4) .wrap{top: 35px}
+
+
+/*모바일용 메뉴 css*/
+.m_navi{height: 80px; z-index: 200; display: none;}
+.m_navi .fixed{height: 80px; background: #3c2820; color: #cdb376; border-bottom: 1px solid rgba(207,182,110,0.3); display: flex; align-items: center; width: 100%; position: fixed;}
+.m_navi .fixed>div{text-align: center;}
+.m_navi .left ul{display: flex; margin-bottom: 0; margin-left: 10px;}
+.m_navi .left ul li{display: flex; padding: 10px; font-size: 1.5em; cursor: pointer; z-index: 100;}
+.m_navi .logo{width: 100%; text-align: center; position: absolute;}
+.m_navi .logo img{cursor: pointer; height: 50px}
+.m_btn{margin-right: 10px; z-index: 1000; position: fixed; top: 20px; right: 10px; display: none;}
+.m_btn .menu_btn{display: flex; flex-direction: column; cursor: pointer; padding: 20px 10px; width: 35px; }
+.m_btn span{display: block; position: absolute; top: calc(50% - 1px); left: calc(50% - 14px); width: 28px; height: 2px; background: #f2f2f2; border-radius: 2px; transition: 0.3s; background: #cdb376;}
+.m_btn span:nth-child(1){transform: translate(0,-8px);}
+.m_btn span:nth-child(2){}
+.m_btn span:nth-child(3){transform: translate(0,8px);}
+
+.active span:nth-child(1){transform: translate(0,0) rotate(45deg) !important;}
+.active span:nth-child(2){transform:  scaleX(0) !important;}
+.active span:nth-child(3){transform: translate(0,0) rotate(-45deg) !important;}
+
+/*모바일 클릭 메뉴바*/
+.m_menu{width: 300px; background: #3c2820; height: 100vh; position: fixed; z-index: 900; top: 0; right: -300px; overflow: hidden;; transition: 0.5s; border-left: 1px solid rgba(207,182,110,0.3);}
+.m_menu a{color: #cdb376;}
+.m_menu a:hover{color: #cdb376;}
+.m_menu a:visited{color: #cdb376;}
+.m_menu ul{display: flex; flex-direction: column; margin-top: 100px;}
+.m_menu ul li{padding: 10px; margin: 20px; color: #cdb376; font-weight: bold; font-style: italic; font-size: 1.3em; cursor: pointer;}
+.m_menu .submenu{position: fixed; top: -100px; height: 100vh; background: #3c2820; right: -300px; width: 299px; transition: 0.5s; padding-top: 100px;}
+.m_menu .submenu li{font-style: normal !important;}
+.m_menu .subbottom{position: fixed; width: 300px; bottom:10px;}
+.m_menu .subbottom ul{display: flex; flex-direction: row; align-items: center;}
+.m_menu .subbottom ul li{width: 100px; height: 70px; margin: 0; text-align: center; font-style: normal !important; display: flex; align-items: center; flex-direction: column; justify-content: center; font-size: 1em;}
+.m_menu .subbottom ul li i{font-size: 18px; line-height: 0}
+.view{right: 0 !important;}
+
+/*메뉴바 미디어쿼리*/
+@media(max-width:1080px){
+    .navi{display: none}
+    .m_navi{display: block;}
+    .m_btn{display: block;}
+}
+
+
+/*contact 컨텍트 css*/
+.contact{height: 100%; padding: 80px 0; background: #f8f4eb; font-family: 'Noto Sans KR';}
+.contact .container{}
+.contact .container ul{margin-bottom: 20px;}
+.contact .container ul span{display: block; width: 20px; height: 2px; background: #3c2820; margin: 20px 0}
+.contact .container ul:nth-child(4) .icon{display: flex;}
+.contact .container ul:nth-child(4) .icon li{margin: 0;}
+.contact .container ul:nth-child(4) .icon img{margin-right: 15px;}
+.contact .container ul li{margin: 5px 0; padding: 5px 0; font-weight: 300;}
+.contact .container ul li a{color: #3c2820;}
+.contact .container ul:nth-child(3) li:nth-child(5){margin-left: 15px}
+.contact .container ul:nth-child(3) li:nth-child(6){margin-left: 15px}
+
+/*contact 컨텍트 css*/
+@media(max-width:640px){
+    .contact{padding: 40px 0;}
+    .contact .container{margin: 0 60px;}
+    .contact .container ul li{margin: 5px 0; padding: 0;}
+    .contact .container ul:nth-child(4) .icon img{margin-right: 30px;}
+}
+
+
+/*푸터 css*/
+.footer{padding: 20px 0; background: #3c2820;}
+.footer .container{height: 100%; display: flex; flex-direction: column; justify-content: center;}
+.footer .container .adress {}
+.footer .container .adress p{margin: 5px; color: #f8f4eb; font-size: 0.9em}
+.footer .top{position: fixed; right: 20px; bottom: 20px; width: 50px; border: 2px solid #cdb376; color: #cdb376; background: none; border-radius: 5px; z-index: 700}
